@@ -5,7 +5,6 @@ ENV ARDUINO_VER 1.8.5
 ENV DISPLAY :1.0
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ["/bin/bash"]
 
 RUN apt update && apt -y install build-essential git xvfb wget xz-utils \
   libxext6 libxtst6 libxrender1 libgtk2.0.0 default-jre libelf-dev \
