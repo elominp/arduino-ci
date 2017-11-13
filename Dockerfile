@@ -22,3 +22,5 @@ RUN git clone https://github.com/buserror/simavr.git && \
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN chmod 755 /usr/local/bin/entrypoint.sh
+
+RUN ln -s /bin/sh /sh
