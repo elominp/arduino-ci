@@ -14,7 +14,8 @@ RUN apt update && apt -y install build-essential git xvfb wget xz-utils \
 RUN wget http://downloads.arduino.cc/arduino-${ARDUINO_VER}-linux64.tar.xz && \
   tar xf arduino-${ARDUINO_VER}-linux64.tar.xz && \
   mv arduino-${ARDUINO_VER} /usr/local/share/arduino && \
-  ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
+  ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino && \
+  rm -rf arduino-${ARDUINO_VER}-linux64.tar.xz
   
 RUN git clone https://github.com/buserror/simavr.git && \
   cd ./simavr && make && make install ; cd - && rm -rf simavr 
